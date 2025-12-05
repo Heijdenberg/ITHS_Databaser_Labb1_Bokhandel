@@ -121,5 +121,23 @@ create table [FörsäljningsDetaljer](
 		primary key ([ISBN], [FörsäljningsId])
 );
 
+----
+create table
+	[Leverantörer] ( [Id] int identity(1,1),
+	[Namn] varchar(100) not null,
+	[Telefon] varchar(50) null,
+	[Epost] varchar(200) null,
+constraint [PK_Leverantorer] primary key ([Id])
+);
 
-
+create table [BokLeverantör] (
+    [LeverantörId] int not null,
+    [ISBN] char(13) not null,
+    [InköpsPris] decimal(10,2) null
+        check ([InköpsPris] >= 0),
+    constraint [FK_BokLeverantor_Leverantorer]
+        foreign key ([LeverantörId]) references [Leverantörer]([Id]),
+    constraint [FK_BokLeverantor_Bocker]
+        foreign key ([ISBN]) references [Böcker]([ISBN]),
+	constraint [PK_BokLeverantor] primary key ([LeverantörId], [ISBN])
+);

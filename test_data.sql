@@ -339,3 +339,38 @@ insert into [FörsäljningsDetaljer] ([ISBN], [FörsäljningsId], [Antal], [Pris]) v
 -- Försäljning 23 – 2025-12-04 (Patrik)
 ('9789164200010', 23, 1, 179.00),  -- Fyrvaktaren
 ('9789132214017', 23, 1, 149.00);  -- Jerusalem
+
+
+
+-----
+
+insert into [Leverantörer] ([Namn], [Telefon], [Epost]) values
+('Förlagssystem AB',       '08-120 00 00', 'info@forlagssystem.se'),
+('Bokia Distribution',     '08-220 00 00', 'order@bokia.se'),
+('Akademibokhandeln Grossist', '010-123 45 67', 'grossist@akademibokhandeln.se'),
+('Adlibris Wholesale',     '08-555 10 00', 'wholesale@adlibris.com');
+
+
+insert into [BokLeverantör] ([LeverantörId], [ISBN], [InköpsPris]) values
+-- Förlagssystem AB (Id = 1) – mycket av standardtitlarna
+(1, '9789129657692',  75.00),  -- Pippi Långstrump
+(1, '9789132214000',  95.00),  -- Nils Holgersson
+(1, '9789132214017',  90.00),  -- Jerusalem
+(1, '9789137148000', 110.00),  -- En man som heter Ove
+(1, '9789164200003', 120.00),  -- Män som hatar kvinnor
+
+-- Bokia Distribution (Id = 2) – främst deckare & moderna romaner
+(2, '9789164200003', 118.00),  -- Män som hatar kvinnor (alternativ leverantör)
+(2, '9789164200010', 115.00),  -- Fyrvaktaren
+(2, '9789137148000', 108.00),  -- En man som heter Ove
+(2, '9789123456789', 100.00),  -- Torka aldrig tårar utan handskar
+
+-- Akademibokhandeln Grossist (Id = 3) – klassiker
+(3, '9789100123456',  80.00),  -- Röda rummet
+(3, '9789100123463',  82.00),  -- Doktor Glas
+(3, '9789100123470',  78.00),  -- Kallocain
+
+-- Adlibris Wholesale (Id = 4) – antologier & vissa moderna titlar
+(4, '9789510123456',  85.00),  -- Muminpappans memoarer
+(4, '9789198400007', 130.00),  -- Svenska berättelser
+(4, '9789123456789',  98.00);  -- Torka aldrig tårar...
