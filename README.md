@@ -10,6 +10,15 @@ The main focus of the project is:
 - Simple reporting and business logic (sales statistics, stock movement between stores)
 
 ---
+## Notes
+
+This is primarily a **learning project** for database design and T-SQL:
+
+- Relational modelling and normalisation  
+- Constraints and referential integrity  
+- Views and stored procedures  
+- Basic reporting and business logic inside the database
+---
 
 ## Repository structure
 
@@ -146,15 +155,3 @@ This procedure is business logic implemented inside the database, including:
 - Input validation  
 - Transaction handling  
 - Error handling in T-SQL
-
----
-
-
-## Notes
-
-This is primarily a **learning project** for database design and T-SQL:
-
-- Relational modelling and normalisation  
-- Constraints and referential integrity  
-- Views and stored procedures  
-- Basic reporting and business logic inside the database
